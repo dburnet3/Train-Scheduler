@@ -1,12 +1,3 @@
-// $(document).ready(function () {
-// <!-- The core Firebase JS SDK is always required and must be listed first -->
-
-// <!-- TODO: Add SDKs for Firebase products that you want to use
-//      https://firebase.google.com/docs/web/setup#config-web-app -->
-
-
-
-// Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyBHjPzxfSjcsk1WOA1t9rXx1hj902wkB-w",
     authDomain: "train-6d9c0.firebaseapp.com",
@@ -18,18 +9,6 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
-
-
-// var config = {
-//     apiKey: "AIzaSyBgxvUw0se9Lvme8ia5JyhZXLPHC2YUeBI",
-//     authDomain: "trainproject-b8986.firebaseapp.com",
-//     databaseURL: "https://trainproject-b8986.firebaseio.com",
-//     projectId: "trainproject-b8986",
-//     storageBucket: "trainproject-b8986.appspot.com",
-//     messagingSenderId: "441344714402"
-// };
-// firebase.initializeApp(config);
 
 // A variable to reference the database.
 var database = firebase.database();

@@ -10,16 +10,16 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-app.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.1/firebase-database.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
-
-    <!-- <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/en-ie.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Document</title>
+    <title>Train Scheduler</title>
 </head>
 
 <body>
@@ -29,8 +29,6 @@
             <i>Welcome Aboard!</i>
         </div>
         <div class="jumbotron">
-            <!-- "Current Train Schedule" Table -->
-
             <div class="panel">
                 <div class="panel-heading">
                     <h3>Current Train Schedule</h3>
@@ -46,17 +44,12 @@
                                 <th>Minutes Away</th>
                             </tr>
                         </thead>
-
-                        <!-- Train info goes here! -->
                         <tbody id="add-row">
                         </tbody>
 
                     </table>
                 </div>
             </div>
-
-            <!-- Form for adding a new train -->
-
             <div class="panel">
                 <div class="panel-heading">
                     <h3>Add Train</h3>
@@ -75,7 +68,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="text">First Train Time (HH:mm - Military Time)</label>
+                            <label for="text">First Train Time (HH:mm)</label>
                             <input type="text" class="form-control" id="first-train">
                         </div>
 
@@ -91,26 +84,7 @@
         </div>
     </div>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-database.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
-
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyBHjPzxfSjcsk1WOA1t9rXx1hj902wkB-w",
-            authDomain: "train-6d9c0.firebaseapp.com",
-            databaseURL: "https://train-6d9c0.firebaseio.com",
-            projectId: "train-6d9c0",
-            storageBucket: "train-6d9c0.appspot.com",
-            messagingSenderId: "1060692871277",
-            appId: "1:1060692871277:web:0f4ceb8a06b5a0c6"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
     <script src="./assets/js/train.js"></script>
 </body>
 
