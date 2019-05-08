@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-app.js"></script> -->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script> -->
+
+    <link rel="stylesheet" href="./assets/images/black-and-white-dark-destination-258510.jpg">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Train Times</h1>
+            <i>Welcome Aboard!</i>
+        </div>
+        <div class="jumbotron">
+            <!-- "Current Train Schedule" Table -->
+
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3>Current Train Schedule</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency(min)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                            </tr>
+                        </thead>
+
+                        <!-- Train info goes here! -->
+                        <tbody id="add-row">
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+            <!-- Form for adding a new train -->
+
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3>Add Train</h3>
+                </div>
+
+                <div class="panel-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="text">Train Name</label>
+                            <input type="text" class="form-control" id="train-name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="text">Destination</label>
+                            <input type="text" class="form-control" id="destination">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="text">First Train Time (HH:mm - Military Time)</label>
+                            <input type="text" class="form-control" id="first-train">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="text">Frequency(min)</label>
+                            <input type="text" class="form-control" id="frequency">
+                        </div>
+
+                        <button type="submit" id="add-train" class="btn btn-success" id="addTrain">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBHjPzxfSjcsk1WOA1t9rXx1hj902wkB-w",
+            authDomain: "train-6d9c0.firebaseapp.com",
+            databaseURL: "https://train-6d9c0.firebaseio.com",
+            projectId: "train-6d9c0",
+            storageBucket: "train-6d9c0.appspot.com",
+            messagingSenderId: "1060692871277",
+            appId: "1:1060692871277:web:0f4ceb8a06b5a0c6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+
+</html>
